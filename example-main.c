@@ -1,8 +1,8 @@
 #include <pebble.h>
-#include "special-draw/special-draw.h"
-#include "special-draw/special-draw-opacity.h"
-#include "special-draw/special-draw-rotation.h"
-#include "special-draw-dither.h"
+#include <special-draw/special-draw.h>
+#include <special-draw/special-draw-opacity.h>
+#include <special-draw/special-draw-rotation.h>
+#include <special-draw-dither/special-draw-dither.h>
 
 Window *main_window;
 GContext *c;
@@ -45,7 +45,7 @@ void layer_update(Layer *me, GContext *ctx) {
   graphics_context_set_fill_color(ctx, GColorRed);
   graphics_fill_rect(ctx, GRect(32, 54, 80, 60), 0, GCornerNone);
   graphics_draw_rect(ctx, GRect(32, 54, 80, 60));
-  
+
   // Begin the session.
   GSpecialSession * session = graphics_context_begin_special_draw(ctx);
 
@@ -69,11 +69,11 @@ void layer_update(Layer *me, GContext *ctx) {
 //  Button Functions
 // ------------------------------------------------------------------------ //
 static void     up_single_click_handler(ClickRecognizerRef recognizer, void *context) {
-  
+
 }
 
 static void select_single_click_handler(ClickRecognizerRef recognizer, void *context) {
-  
+
 }
 static void   select_long_click_handler(ClickRecognizerRef recognizer, void *context) {}
 static void   down_single_click_handler(ClickRecognizerRef recognizer, void *context) {
