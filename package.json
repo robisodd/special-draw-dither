@@ -1,26 +1,22 @@
 {
+    "name": "special-draw-dither",
     "author": "robisodd",
+    "version": "1.0.0",
+    "files": [
+        "dist.zip"
+    ],
+    "repository": "robisodd/special-draw-dither",
+    "keywords": [
+        "pebble-package"
+    ],
     "dependencies": {
         "special-draw": "^2.0.0"
     },
-    "keywords": [],
-    "name": "special-draw-jnewbrand",
     "pebble": {
-        "capabilities": [
-            ""
-        ],
-        "displayName": "Special Draw - jnewbrand",
-        "enableMultiJS": true,
-        "messageKeys": [],
-        "projectType": "native",
+        "projectType": "package",
+        "sdkVersion": "3",
         "resources": {
             "media": []
-        },
-        "sdkVersion": "3",
-        "uuid": "7470306b-b5cf-4549-80ff-dc74eac9b31c",
-        "watchapp": {
-            "watchface": false
         }
-    },
-    "version": "1.0.0"
+    }
 }
