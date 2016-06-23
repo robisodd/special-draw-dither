@@ -27,7 +27,7 @@ static void prv_replace_color_with_dither(GBitmap * framebuffer, dither_struct *
     GBitmapDataRowInfo info = gbitmap_get_data_row_info(framebuffer, y);
     for(int x = info.min_x; x <= info.max_x; x++) {
       #if defined(PBL_BW) && defined(PBL_RECT)
-        if(!(info.data[x/8] & (x%8)) == !((rgb->replace_color).argb&1)) {
+        if(!(info.data[x/8] & (1<<(x%8))) == !((rgb->replace_color).argb&1)) {
           info.data[x/8] &= ~(1 << (x%8));                                         // Color Black
           info.data[x/8] |= (intensity > dither_table[x&7][y&7] ? 1 : 0) << (x%8); // Color White
         }
